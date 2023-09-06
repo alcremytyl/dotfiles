@@ -1,0 +1,10 @@
+configuration {
+  terminal: "kitty";
+}
+
+@import "color-output.rasi"
+
+* {
+  active-background: "#00ffff"; 
+}
+

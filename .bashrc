@@ -1,5 +1,7 @@
 #!/usr/bin/bash
 
+export VISUAL=$EDITOR
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
