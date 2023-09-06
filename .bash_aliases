@@ -41,6 +41,7 @@ nvconf(){
 }
 
 
+alias ncm="ncmpcpp"
 # <-- configs -->
 alias balias="nvconf .bash_aliases"
 alias bashrc="nvconf .bashrc"
