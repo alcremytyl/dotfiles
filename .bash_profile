@@ -2,6 +2,8 @@
 
 export EDITOR=~/.local/bin/nvim
 export TERMINAL=kitty
+export RANDOMIZE_WALLPAPER=false # for ~/.config/bspwm/bspwmrc
+
 # TODO pywal this bitch up
 export FZF_DEFAULT_OPTS="
 	--color=fg:#c5cdd9,hl:#6cb6eb 

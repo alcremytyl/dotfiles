@@ -1,5 +1,6 @@
 configuration {
   terminal: "kitty";
+  modi: "window,run,drun,filebrowser,emoji,calc";
 }
 
 @import "color-output.rasi"
