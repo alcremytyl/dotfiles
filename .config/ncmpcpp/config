@@ -14,3 +14,5 @@ visualizer_in_stereo = yes
 # visualizer_type = wave
 visualizer_autoscale = yes
 visualizer_spectrum_dft_size = 5
+
+# /usr/share/applications/ncmpcpp.desktop

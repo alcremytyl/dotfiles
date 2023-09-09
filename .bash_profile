@@ -11,9 +11,9 @@ export FZF_DEFAULT_OPTS="
 	--color=marker:#a0c980,spinner:#faaaaa,header:#5dbbc1
   --color=gutter:#aaaafa 
   --height=50% --border --layout=reverse-list
-
-    --color fg:7,bg:0,hl:1,fg+:232,bg+:1,hl+:255
-    --color info:7,prompt:2,spinner:1,pointer:232,marker:1
+  --preview=\"if [[ {} =~ ('.jpg'|'.JPG'|'.jpeg'|'.png'|'.PNG')$ ]]; then catimg -r2 -w$COLUMNS {};elif [ -d {} ]; then ls --color=always --group-directories-first -H {}; else nl -pba -w1 -s' ' {};fi\"
+  --color fg:7,bg:0,hl:1,fg+:232,bg+:1,hl+:255
+  --color info:7,prompt:2,spinner:1,pointer:232,marker:1
 "
 
 # <-- XDG info --> 
