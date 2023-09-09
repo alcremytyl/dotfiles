@@ -5,6 +5,10 @@
 # in case Java apps ever fail
 # https://wiki.archlinux.org/title/bspwm#Problems_with_Java_applications
 
+_grepload() {
+  pgrep -x "$1" > /dev/null || "$@" &
+}
+
 # <-- theme --> 
 wal -i ~/Pictures/wallpapers/malin.jpg
 . /home/mytyl/.cache/wal/colors.sh
@@ -14,13 +18,15 @@ bspc config focused_border_color "$color15"
 bspc config presel_border_color  "$color1"
 
 # <-- processes -->
-pgrep -x sxhkd  > /dev/null || sxhkd &  # ~/.config/sxhkd/sxhkdrc
-pgrep -x mpd    > /dev/null || mpd &    # ~/.config/mpd/mpd.conf
+_grepload sxhdk 
+_grepload mpd
+_grepload picom --config ~/.config/picom/picom.conf
+_grepload polybar -c ~/.config/polybar/config.ini example
+_grepload dunst -conf ~/.config/dunst/dunstrc
+# pgrep -x sxhkd  > /dev/null || sxhkd &  # ~/.config/sxhkd/sxhkdrc
+# pgrep -x mpd    > /dev/null || mpd &    # ~/.config/mpd/mpd.conf
+# pgrep -x picom > /dev/null || picom --config ~/.config/picom/picom.conf &
 
-killall picom polybar dunst
-picom &
-polybar -c ~/.config/polybar/config.ini example &
-dunst -conf ~/.config/dunst/dunstrc &
 
 # <-- display --> 
 bspc monitor -d I II III IV V VI VII VIII IX X
@@ -39,4 +45,4 @@ bspc rule -a Kupfer.py   focus=on
 bspc rule -a Screenkey   manage=off
 bspc rule -a Pavucontrol state=floating follow=on
 bspc rule -a Solaar      state=floating follow=on
-
+# bspc config external_rules_command ~/.config/bspwm/external_rules

@@ -17,11 +17,6 @@ super + Return
 super + @space
 	rofi -show drun
 
-# launch rofi with those tab things 
-# super + d
-# 	rofi 
-
-
 # reload sxhkd
 super + Escape
 	pkill -USR1 -x sxhkd && dunstify -a "sxhkd" "Reloaded config"
@@ -55,9 +50,8 @@ super + y
 super + g
 	bspc node -s biggest.window
 
-#
-# state/flags
-#
+
+# <-- state/flags -->
 
 # set the window state
 super + {t,shift + t,s,f}
@@ -67,9 +61,8 @@ super + {t,shift + t,s,f}
 super + ctrl + {m,x,y,z}
 	bspc node -g {marked,locked,sticky,private}
 
-#
-# focus/swap
-#
+
+# <-- focus/swap -->
 
 # focus the node in the given direction
 super + {_,shift + }{h,j,k,l}
@@ -91,19 +84,12 @@ super + bracket{left,right}
 super + {grave,Tab}
 	bspc {node,desktop} -f last
 
-# focus the older or newer node in the focus history
-super + {o,i}
-	bspcq
-	bspc node {older,newer} -f; \
-	bspc wm -h on
-
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
-#
-# preselect
-#
+
+# <-- preselect -->
 
 # preselect the direction
 super + ctrl + {h,j,k,l}
@@ -121,9 +107,8 @@ super + ctrl + space
 super + ctrl + shift + space
 	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
-#
-# move/resize
-#
+
+# <-- move/resize -->
 
 # expand a window by moving one of its side outward
 # https://www.reddit.com/r/bspwm/comments/g6bbcz/how_can_i_resize_windows_with_one_key_combination/fo9cepu/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button

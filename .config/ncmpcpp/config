@@ -1,0 +1,16 @@
+mpd_music_dir = ~/Music
+mpd_crossfade_time = 3
+
+#execute_on_song_change = ~/.config/ncmpcpp/scripts/songinfo
+execute_on_song_change = ~/.config/ncmpcpp/scripts/songinfo
+
+lyrics_directory = ~/.local/share/ncmpcpp/lyrics
+lyrics_fetchers = azlyrics, genius, musixmatch, sing365, metrolyrics, justsomelyrics, jahlyrics, plyrics, tekstowo, zeneszoveg, internet
+follow_now_playing_lyrics = yes
+fetch_lyrics_for_current_song_in_background = no
+store_lyrics_in_song_dir = no
+
+visualizer_in_stereo = yes
+# visualizer_type = wave
+visualizer_autoscale = yes
+visualizer_spectrum_dft_size = 5
