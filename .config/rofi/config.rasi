@@ -1,6 +1,11 @@
 configuration {
   terminal: "kitty";
-  modi: "window,run,drun,filebrowser,emoji,calc";
+  font: "JetbrainsMono Nerd Font 12";
+  window-thumbnail: true;
+  modi: "window,run,drun,filebrowser,emoji,calc,powermenu:rofi-powermenu";
+  case-sensitive: false;
+  cycle: true;
+  show-icons: true;
 }
 
 @import "color-output.rasi"

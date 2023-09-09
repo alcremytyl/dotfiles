@@ -3,18 +3,6 @@ mkcd() { mkdir -p "$1" && cd "$1" || return 1; }
 alias nvim=~/.local/bin/nvim
 
 # # write then source
-# __ws() {
-#   if [ $# -lt 1 ] && [ "$#" -gt 2 ]; then
-#     echo "Fix your .bashrc retard"
-#     return 1
-#   fi
-#
-#   case "$1" in
-#     -d) nvim -c ":cd $XDG_CONFIG_HOME/$2";;
-#     -s) nvim "$2"; source "$2";;
-#      *) nvim "$1";;
-#   esac
-# }
 
 # write config with nvim
 # exists to keep the alias list light
@@ -40,7 +28,7 @@ nvconf(){
   fi
 }
 
-alias ncm="ncmpcpp"
+alias ogey="feh ~/Pictures/important/ogey.png"
 # <-- configs -->
 alias balias="nvconf .bash_aliases"
 alias bashrc="nvconf .bashrc"
