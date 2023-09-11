@@ -7,7 +7,7 @@ XF86MonBrightness{Up,Down}
 # volume control
 XF86Audio{RaiseVolume,LowerVolume,Mute}
 	amixer set Master {5%+,5%-,toggle}
-	notify-send "Volume {++,--,toggled}"
+	# notify-send "Volume {++,--,toggled}"
 
 # terminal emulator
 super + Return
@@ -21,15 +21,10 @@ super + @space
 super + Escape
 	pkill -USR1 -x sxhkd && dunstify -a "sxhkd" "Reloaded config"
 
-# screenshot
-# super + shift + Print
-# 	flameshot gui
 
 # <-- bspwm hotkeys -->
 
 # quit/restart bspwm
-# super + shift + {q,r}
-	# bspc {quit,wm -r}
 super + shift + {q,r}
 	{rofi -show powermenu,\
   bspc wm -r && sleep 0.5 && dunstify -a "bspwm" "Reloaded config"}

@@ -25,9 +25,12 @@ bspc config presel_border_color  "$color1"
 
 
 # <-- processes -->
-_grepload sxhdk   # ~/.config/sxhkd/sxhkdrc 
+_grepload sxhkd   # ~/.config/sxhkd/sxhkdrc 
 _grepload mpd     # ~/.config/mpd/mpd.conf
-_grepload picom   --experimental-backends --config ~/.config/picom/picom.conf
+_grepload picom \
+  --experimental-backends \
+  --backend glx \
+  --config ~/.config/picom/picom.conf
 _grepload polybar -r -c ~/.config/polybar/config.ini example # has a launch.sh
 _grepload dunst   -conf ~/.config/dunst/dunstrc
 
