@@ -3,10 +3,13 @@
 # brightness
 XF86MonBrightness{Up,Down}
 	brightnessctl s {+5%,5%-}
+# XF86MonBrightness{Up,Down} + shift
+# 	notify-send "shit" "is working"
 
 # volume control
 XF86Audio{RaiseVolume,LowerVolume,Mute}
 	amixer set Master {5%+,5%-,toggle}
+	#TODO make this shit better
 	# notify-send "Volume {++,--,toggled}"
 
 # terminal emulator

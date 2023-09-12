@@ -1,2 +1,5 @@
 ~/.config/ncmpcpp/previews/*
+~/.config/mpd/pid
+~/.config/mpd/sticker.sql
+~/.config/mpd/database
 **.git
