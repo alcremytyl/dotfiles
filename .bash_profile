@@ -3,6 +3,7 @@
 export EDITOR=~/.local/bin/nvim
 export TERMINAL=kitty
 export RANDOMIZE_WALLPAPER=false # for ~/.config/bspwm/bspwmrc
+export ICON_PATH=~/.local/share/icons
 
 # TODO pywal this bitch up
 export FZF_DEFAULT_OPTS="

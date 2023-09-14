@@ -2,13 +2,15 @@
 
 # brightness
 XF86MonBrightness{Up,Down}
-	brightnessctl s {+5%,5%-}
-# XF86MonBrightness{Up,Down} + shift
-# 	notify-send "shit" "is working"
+	~/.config/dunst/scripts/brightness.sh screen {+,-}
+	# brightnessctl s {+5%,5%-}
 
 # volume control
 XF86Audio{RaiseVolume,LowerVolume,Mute}
 	amixer set Master {5%+,5%-,toggle}
+		# {5%+ && notify-send -a "Volume" "works",\
+		# 5%- && notify-send -a "Volume" "aa",\
+    # toggle && notify-send -a "Volume" "Toggle"}
 	#TODO make this shit better
 	# notify-send "Volume {++,--,toggled}"
 
