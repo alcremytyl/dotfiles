@@ -33,9 +33,9 @@ esac
 current=$(brightnessctl -d "$device" | grep "Current" | awk -F'[()]' '{print $2}' | sed 's/%//g')
 
 if [[ "$current" -lt "50" ]]; then
-    icon="$ICON_PATH"/brightness-down.svg
+    icon="$ICON_PATH/brightness-down.svg"
 else
-    icon="$ICON_PATH"/brightness-up.svg
+    icon="$ICON_PATH/brightness-up.svg"
 fi
 
-dunstify -i "$icon" -a "$header" -r "$id" -h int:value:"$current" "$current"%
+dunstify -t 750 -i "$icon" -a "$header" -r "$id" -h int:value:"$current" "$current"%
