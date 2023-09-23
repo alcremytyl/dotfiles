@@ -29,6 +29,7 @@ nvconf(){
 }
 
 alias ogey="feh ~/Pictures/important/ogey.png"
+alias notes="cd ~/Documents/obsidian/College && nvim"
 # <-- configs -->
 alias balias="nvconf .bash_aliases"
 alias bashrc="nvconf .bashrc"
