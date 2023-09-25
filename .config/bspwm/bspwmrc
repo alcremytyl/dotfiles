@@ -33,6 +33,7 @@ _grepload picom \
   --config ~/.config/picom/picom.conf
 _grepload polybar -r -c ~/.config/polybar/config.ini example # has a launch.sh
 _grepload dunst   -conf ~/.config/dunst/dunstrc
+_grepload mpd-notify
 
 
 # <-- display --> 

@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# moved to ~/.local/bin/mpd-notify
+
+
 music_dir="$HOME/Music"
 previewdir="$XDG_CONFIG_HOME/ncmpcpp/previews"
 filename="$(mpc --format "$music_dir"/%file% current)"
@@ -8,4 +11,4 @@ previewname="$previewdir/$(mpc --format %album% current | base64).png"
 # generate preview file
 [ -e "$previewname" ] || ffmpeg -y -i "$filename" -an -vf scale=128x128 "$previewname" > /dev/null 2>&1
 
-notify-send -t 750 -a "ncmpcpp" "Now Playing" "$(mpc --format '%title% \n%artist% - %album%' current)" -i "$previewname"
+notify-send -t 2000 -a "ncmpcpp" "Now Playing" "$(mpc --format '%title% \n%artist% - %album%' current)" -i "$previewname"

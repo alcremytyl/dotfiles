@@ -30,6 +30,7 @@ nvconf(){
 
 alias ogey="feh ~/Pictures/important/ogey.png"
 alias notes="cd ~/Documents/obsidian/College && nvim"
+alias setclip="xclip -selection c"
 # <-- configs -->
 alias balias="nvconf .bash_aliases"
 alias bashrc="nvconf .bashrc"
