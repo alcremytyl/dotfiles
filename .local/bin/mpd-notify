@@ -9,10 +9,11 @@ main() {
   # generate preview file
   [ -e "$previewname" ] || ffmpeg -y -i "$filename" -an -vf scale=128x128 "$previewname" > /dev/null 2>&1
 
-  notify-send -t 2000 -a "mpd" "Now Playing" "$(mpc --format '%title% \n%artist% - %album%' current)" -i "$previewname"
+  # notify-send -t 2000 -a "mpd" "Now Playing" "$(mpc --format '%title% \n%artist% - %album%' current)" -i "$previewname"
+  dunstify -r 6610 -t 2000 -a "mpd" "Now Playing" "$(mpc --format '%title% \n%artist% - %album%' current)" -i "$previewname"
 }
 
 while true; do 
-  mpc idle
+  mpc idle player
   main
 done

@@ -27,7 +27,7 @@ super + @space
 
 # reload sxhkd
 super + Escape
-	pkill -USR1 -x sxhkd && dunstify -a "sxhkd" "Reloaded config"
+	pkill -USR1 -x sxhkd && notify-send -t 2000 -a "sxhkd" "Reloaded config"
 
 
 # <-- bspwm hotkeys -->
@@ -35,7 +35,7 @@ super + Escape
 # quit/restart bspwm
 super + shift + {q,r}
 	{rofi -show powermenu,\
-  bspc wm -r && sleep 0.5 && dunstify -a "bspwm" "Reloaded config"}
+  bspc wm -r && sleep 0.5 && notify-send -t 2000 -a "bspwm" "Reloaded config"}
 
 # close and kill
 super + q
