@@ -8,7 +8,7 @@ case $- in
       *) return;;
 esac
 
-
+# . ~/.bash_profile
 . "$HOME"/.bash_aliases
 . "$HOME"/.local/share/cargo/env
 . "$HOME"/.cache/wal/colors.sh
