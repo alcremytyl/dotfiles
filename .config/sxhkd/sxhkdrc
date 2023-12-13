@@ -7,15 +7,12 @@ XF86MonBrightness{Up,Down}
 	~/.config/dunst/scripts/brightness.sh screen {+,-}
 	# brightnessctl s {+5%,5%-}
 
+shift + XF86MonBrightness{Up,Down}
+	~/.config/dunst/scripts/brightness.sh keyboard {+,-}
+
 # volume control
 XF86Audio{RaiseVolume,LowerVolume,Mute}
 	~/.config/dunst/scripts/volume.sh {+,-,~}
-	# amixer set Master {5%+,5%-,toggle}
-		# {5%+ && notify-send -a "Volume" "works",\
-		# 5%- && notify-send -a "Volume" "aa",\
-    # toggle && notify-send -a "Volume" "Toggle"}
-	#TODO make this shit better
-	# notify-send "Volume {++,--,toggled}"
 
 # terminal emulator
 super + Return
@@ -29,6 +26,13 @@ super + @space
 super + Escape
 	pkill -USR1 -x sxhkd && notify-send -t 2000 -a "sxhkd" "Reloaded config"
 
+# when the pic goes hard
+super + shift + s
+	flameshot gui
+
+# clipboard
+super + v
+	rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 
 # <-- bspwm hotkeys -->
 

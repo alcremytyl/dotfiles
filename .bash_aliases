@@ -2,6 +2,7 @@
 mkcd() { mkdir -p "$1" && cd "$1" || return 1; }
 alias nvim=~/.local/bin/nvim
 
+
 # # write then source
 
 # write config with nvim
@@ -31,11 +32,12 @@ nvconf(){
 alias ogey="feh ~/Pictures/important/ogey.png"
 alias goku="feh ~/Pictures/important/goku.png"
 alias notes="cd ~/Documents/obsidian/College && nvim"
+alias college="firefox -p College& > /dev/null 2>&1"
 
 alias setclip="xclip -selection c"
 # <-- configs -->
-alias balias="nvconf .bash_aliases"
-alias bashrc="nvconf .bashrc"
+alias balias="nvim ~/.bash_aliases && ~/.bash_aliases"
+alias bashrc="nvim ~/.bashrc && ~/.bashrc"
 alias nvimrc="nvconf nvim/lua/custom"
 alias dotfiles="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
@@ -47,4 +49,5 @@ alias rg="rg --color=auto"
 alias grep="grep --color=auto"
 alias fgrep="fgrep --color=auto"
 alias egrep="egrep --color=auto"
-
+alias ffmpeg="ffmpeg -hide_banner"
+alias ffprobe="ffprobe -hide_banner"
