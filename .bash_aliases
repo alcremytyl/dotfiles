@@ -29,17 +29,18 @@ nvconf(){
   fi
 }
 
-alias ogey="feh ~/Pictures/important/ogey.png"
-alias goku="feh ~/Pictures/important/goku.png"
+alias ogey="feh -F ~/Pictures/important/ogey.png"
+alias goku="feh -F ~/Pictures/important/goku.png"
 alias notes="cd ~/Documents/obsidian/College && nvim"
-alias college="firefox -p College& > /dev/null 2>&1"
-
+alias college="firefox -p College& > /dev/null true 2>&1"
 alias setclip="xclip -selection c"
+alias rmfzf="rm \$(fzf)"
+
 # <-- configs -->
 alias balias="nvim ~/.bash_aliases && ~/.bash_aliases"
 alias bashrc="nvim ~/.bashrc && ~/.bashrc"
 alias nvimrc="nvconf nvim/lua/custom"
-alias dotfiles="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias dotfiles="git --git-dir=\$HOME/.dotfiles/ --work-tree=\$HOME"
 
 # <-- Minecraft 1.12 -->
 alias ls="ls --color=auto"
