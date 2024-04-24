@@ -21,8 +21,8 @@ case "$1" in
 esac
 
 case "$2" in
-  +) brightnessctl s 5%+;;
-  -) brightnessctl s 5%-;;
+  +) brightnessctl -d "$device" s 5%+;;
+  -) brightnessctl -d "$device" s 5%-;;
   *) 
     echo "Unknown option $2"
     notify-send -i /dev/null -a "Brightness" "Unknown option" "$2"

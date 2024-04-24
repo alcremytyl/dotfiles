@@ -1,16 +1,14 @@
 #!/usr/bin/bash
 
 export EDITOR=~/.local/bin/nvim
+export VISUAL="$EDITOR"         # for ranger
 export TERMINAL=kitty
 export RANDOMIZE_WALLPAPER=false # for ~/.config/bspwm/bspwmrc
 export ICON_PATH=~/.local/share/icons
 
-# TODO pywal this bitch up
+# TODO: pywal this bitch up
+# TODO: nvm donn't do that 
 export FZF_DEFAULT_OPTS="
-	--color=fg:#c5cdd9,hl:#6cb6eb 
-	--color=fg+:#aafafa,bg+:#16161e,hl+:#5dbbc1 
-	--color=marker:#a0c980,spinner:#faaaaa,header:#5dbbc1
-  --color=gutter:#aaaafa 
   --height=50% --border --layout=reverse-list
   --preview=\"
     if [[ {} =~ ('.jpg'|'.JPG'|'.jpeg'|'.png'|'.PNG')$ ]]; then 
@@ -41,3 +39,4 @@ export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 
 export SQLITE_HISTORY="$XDG_DATA_HOME/sqlite_history"
 
+. "/home/mytyl/.local/share/share/cargo/env"

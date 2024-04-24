@@ -55,3 +55,7 @@ bspc rule -a Screenkey   manage=off
 bspc rule -a Pavucontrol state=floating follow=on
 bspc rule -a Solaar      state=floating follow=on
 bspc rule -a ncmpcpp     state=floating follow=on
+
+# <-- other --> 
+# TODO  cat out TODO
+# dunst 

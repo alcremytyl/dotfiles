@@ -3,7 +3,7 @@ mkcd() { mkdir -p "$1" && cd "$1" || return 1; }
 alias nvim=~/.local/bin/nvim
 
 
-# # write then source
+# write then source
 
 # write config with nvim
 # exists to keep the alias list light
@@ -35,6 +35,11 @@ alias notes="cd ~/Documents/obsidian/College && nvim"
 alias college="firefox -p College& > /dev/null true 2>&1"
 alias setclip="xclip -selection c"
 alias rmfzf="rm \$(fzf)"
+alias nvimswapwipe="rm ~/.local/state/nvim/swap//*"
+
+alias fucking="sudo"
+alias fuck="sudo \$(history -p \!\!)"
+alias FUCK="fuck"
 
 # <-- configs -->
 alias balias="nvim ~/.bash_aliases && ~/.bash_aliases"

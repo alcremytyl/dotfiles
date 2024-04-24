@@ -11,5 +11,7 @@ esac
 # . ~/.bash_profile
 . "$HOME"/.bash_aliases
 . "$HOME"/.local/share/cargo/env
-. "$HOME"/.cache/wal/colors.sh
+# . "$HOME"/.cache/wal/colors.sh
 eval "$(starship init bash)"
+eval "$(zoxide init bash)"
+# . "/home/mytyl/.local/share/share/cargo/env"
